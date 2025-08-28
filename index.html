@@ -1,0 +1,74 @@
+
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Super Mall</title>
+<link rel="stylesheet" href="main.css" />
+</head>
+<body>
+<header class="site-header">
+<h1>Super Mall</h1>
+<div id="top-controls"></div>
+</header>
+
+
+<main id="app">
+<!-- Auth -->
+<section id="auth-section" class="card">
+<h2>Sign in / Sign up</h2>
+<div class="row">
+<input id="inputName" placeholder="Your name (for sign up)" />
+</div>
+<div class="row">
+<input id="inputEmail" placeholder="Email" />
+</div>
+<div class="row">
+<input id="inputPassword" placeholder="Password" type="password" />
+</div>
+<div class="row buttons">
+<button id="btnSignUp">Sign Up (merchant)</button>
+<button id="btnSignIn">Sign In</button>
+</div>
+<div id="auth-msg" class="muted"></div>
+</section>
+
+
+<!-- Merchant dashboard -->
+<section id="merchant-dashboard" class="card" style="display:none;">
+<h2>Merchant Dashboard</h2>
+<div class="row">
+<button id="btnSignOut">Sign Out</button>
+</div>
+
+
+<hr />
+
+
+<h3>Create Shop</h3>
+<form id="formCreateShop">
+<input name="name" placeholder="Shop name" required />
+<input name="category" placeholder="Category" required />
+<input name="floor" placeholder="Floor" required />
+<input name="lat" placeholder="Latitude (optional)" />
+<input name="lng" placeholder="Longitude (optional)" />
+<button type="submit">Create Shop</button>
+</form>
+
+
+<h3>Your Shops</h3>
+<div id="shopList"></div>
+
+
+<template id="shop-card-template">
+<div class="shop-card card-lite">
+<strong class="shop-name"></strong>
+<div class="shop-meta"></div>
+<div class="shop-actions"></div>
+</div>
+</template>
+</section>
+
+
+<!-- Public: browse shops -->
+</html>
